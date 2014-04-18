@@ -3,6 +3,7 @@
  * Compiler : Arduino 1.5.2                                                    *
  * Board    : Arduino DUE                                                      *
  * Device   : 74HC595 LED                                                      *
+ * Link     : http://myfunnyelectronics.blogspot.in/2014/04/blog-post.html     * 
  * Author   : Bavensky :3                                                      *
  * E-Mail   : Aphirak_Sang-ngenchai@hotmail.com                                *
  * Date     : 18/04/2014 [dd/mm/yyyy]                                          *
