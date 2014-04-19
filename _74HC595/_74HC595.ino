@@ -25,10 +25,15 @@ void loop()
   // ฐาน 2  = 0B11111111
   // ฐาน 10 = 255
   // ฐาน 16 = 0xFF
-  
-  A = 0; B = 0B00000000; 
-  
-  Send(B,A);
+  A = 1; B = 0B10111111;   Send(B,A);
+  A = 2; B = 0B10000110;   Send(B,A);
+  A = 4; B = 0B11011011;   Send(B,A);
+  A = 8; B = 0B11001111;   Send(B,A);
+  A = 16; B = 0B11100110;   Send(B,A);
+  A = 32; B = 0B11101101;   Send(B,A);
+  A = 64; B = 0B11111101;   Send(B,A);
+  A = 128; B = 0B10000111;   Send(B,A);
+  A = 255; B = 0B11111111;   Send(B,A);
   
   // A คือส่งข้อมูลเข้าไอซีตัวแรก
   // B คือส่งข้อมูลเข้าไอซีตัวที่สอง 
@@ -45,7 +50,7 @@ void loop()
 void Send(int ic2,int ic1)
 {
   digitalWrite(latchPin, LOW);                
-  shiftOut(dataPin, clockPin, LSBFIRST,ic2);  
+  shiftOut(dataPin, clockPin, MSBFIRST,ic2);  
   shiftOut(dataPin, clockPin, MSBFIRST,ic1);  
   digitalWrite(latchPin, HIGH);     
   delay(1000);
